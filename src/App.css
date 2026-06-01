@@ -627,6 +627,39 @@ button {
   max-width: 34rem;
 }
 
+/* Fix: tighter section heading sizing and FAQ spacing to avoid overlapping text */
+.section-frame .section-heading h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  line-height: 1.08;
+  margin: 0 0 0.6rem;
+  position: relative;
+  z-index: 2;
+  word-break: break-word;
+}
+
+.section-frame.faq-section .faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.faq-item {
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+}
+
+.faq-question-row strong {
+  font-size: 1.05rem;
+  display: block;
+}
+
+.faq-item p {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 .filter-row {
   display: flex;
   flex-wrap: wrap;
